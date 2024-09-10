@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "rl-mdp"
+version = "0.1.0"
+description = ""
+authors = ["Matthijs <matthijs.vanderlende@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+scipy = "^1.14.1"
+pandas = "^2.2.2"
+matplotlib = "^3.9.2"
+loguru = "^0.7.2"
+notebook = "^7.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
