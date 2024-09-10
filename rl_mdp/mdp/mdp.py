@@ -1,18 +1,20 @@
-import numpy as np
 from typing import List, Dict, Callable
-from assignment2_mdp.mdp.abstract_mdp import AbstractMDP
-from assignment2_mdp.mdp.reward_function import RewardFunction
-from assignment2_mdp.mdp.transition_function import TransitionFunction
+
+import numpy as np
+
+from rl_mdp.mdp.abstract_mdp import AbstractMDP
+from rl_mdp.mdp.reward_function import RewardFunction
+from rl_mdp.mdp.transition_function import TransitionFunction
 
 
 class MDP(AbstractMDP):
     def __init__(
-        self,
-        states: List[int],
-        actions: List[int],
-        transition_function: TransitionFunction,
-        reward_function: RewardFunction,
-        discount_factor: float = 0.9
+            self,
+            states: List[int],
+            actions: List[int],
+            transition_function: TransitionFunction,
+            reward_function: RewardFunction,
+            discount_factor: float = 0.9
     ):
         """
         Initializes the Markov Decision Process (MDP).
@@ -29,15 +31,16 @@ class MDP(AbstractMDP):
         self.reward_function = reward_function
         self._discount_factor = discount_factor
 
-    def transition_prob(self, state: int, action: int, new_state: int) -> float:
+    def transition_prob(self, new_state: int, state: int, action: int) -> float | np.ndarray:
         """
-        Returns the transition probabilities for a given state and action by calling the transition function.
+        Returns the transition probabilities for the new state given state and action by calling the transition
+        function.
 
+        :param new_state: New state
         :param state: Current state
         :param action: Action taken
-        :param new_state: New state
 
-        :return: A NumPy array of transition probabilities to the next states.
+        :return: Probability p(s'|s,a).
         """
         return self.transition_function(state, action)[new_state]
 

@@ -1,4 +1,4 @@
-from assignment2_mdp.mdp.abstract_mdp import AbstractMDP
+from rl_mdp.mdp.abstract_mdp import AbstractMDP
 
 
 class BellmanEquationSolver:

@@ -10,12 +10,12 @@ class AbstractMDP(ABC):
     """
 
     @abstractmethod
-    def transition_prob(self, state: int, action: int, new_state: int) -> float:
+    def transition_prob(self, new_state: int, state: int, action: int) -> float | np.ndarray:
         """
         An MDP should have a transition function. In this case modeled as p(s'|s,a).
+        :param new_state:
         :param state:
         :param action:
-        :param new_state:
         :return: Probability p(s'|s,a).
         """
         pass
