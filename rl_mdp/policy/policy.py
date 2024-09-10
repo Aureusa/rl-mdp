@@ -1,11 +1,16 @@
 from typing import List, Optional
 import numpy as np
+from rl_mdp.policy.abstract_policy import AbstractPolicy
 
 
-class StochasticPolicy:
+class Policy(AbstractPolicy):
+    """
+    This class acts as a wrapper that maps states to a probability vector for each action.
+    In case of a deterministic policy we would have that one action gets probability one.
+    """
     def __init__(self, policy_mapping: Optional[np.ndarray] = None, num_actions: Optional[int] = None):
         """
-        Initializes a stochastic policy.
+        Initializes a simple (stochastic) policy.
 
         :param policy_mapping: A NumPy array where each element represents a deterministic action for each state.
                                This will be converted to a stochastic policy where one action has probability 1.
