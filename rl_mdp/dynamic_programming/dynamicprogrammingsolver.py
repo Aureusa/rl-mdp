@@ -29,7 +29,6 @@ class DynamicProgrammingSolver:
     def policy_iteration(self) -> Policy:
         """
         Performs policy iteration to find the optimal policy.
-        Hint: Re-use the BellmanEquationSolver for policy evaluation step.
 
         :return: An optimal policy.
         """
