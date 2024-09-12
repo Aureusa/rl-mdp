@@ -1,7 +1,5 @@
-from typing import List, Dict, Callable
-
+from typing import List
 import numpy as np
-
 from rl_mdp.mdp.abstract_mdp import AbstractMDP
 from rl_mdp.mdp.reward_function import RewardFunction
 from rl_mdp.mdp.transition_function import TransitionFunction

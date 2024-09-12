@@ -1,4 +1,3 @@
-import numpy as np
 from rl_mdp.mdp.abstract_mdp import AbstractMDP
 from rl_mdp.policy.policy import Policy
 
