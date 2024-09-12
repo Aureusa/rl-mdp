@@ -43,3 +43,11 @@ class DynamicProgrammingSolver:
         :return: A NumPy array representing the value function for the given policy.
         """
         pass
+
+    def policy_improvement(self, policy: AbstractPolicy) -> Policy:
+        """
+        Performs policy improvement on a given policy.
+
+        :return: A policy.
+        """
+        pass    
