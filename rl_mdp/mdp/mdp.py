@@ -25,8 +25,8 @@ class MDP(AbstractMDP):
         """
         self._states = states
         self._actions = actions
-        self.transition_function = transition_function
-        self.reward_function = reward_function
+        self._transition_function = transition_function
+        self._reward_function = reward_function
         self._discount_factor = discount_factor
 
     def transition_prob(self, new_state: int, state: int, action: int) -> float | np.ndarray:
@@ -40,7 +40,7 @@ class MDP(AbstractMDP):
 
         :return: Probability p(s'|s,a).
         """
-        return self.transition_function(state, action)[new_state]
+        return self._transition_function(state, action)[new_state]
 
     def reward(self, state: int, action: int) -> float:
         """
@@ -51,7 +51,7 @@ class MDP(AbstractMDP):
 
         :return: A float representing the reward for the given (state, action) pair.
         """
-        return self.reward_function(state, action)
+        return self._reward_function(state, action)
 
     @property
     def states(self) -> List[int]:
