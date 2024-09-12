@@ -33,7 +33,7 @@ class Policy(AbstractPolicy):
             raise ValueError("The action probabilities must sum to 1.")
         self.action_dist[state] = action_probabilities
 
-    def action_prob(self, action: int, state: int) -> float:
+    def action_prob(self, state: int, action: int) -> float:
         """
         :param state:
         :param action:

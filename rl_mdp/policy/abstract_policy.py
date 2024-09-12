@@ -12,5 +12,5 @@ class AbstractPolicy(ABC):
         pass
 
     @abstractmethod
-    def action_prob(self, action: int, state: int) -> float:
+    def action_prob(self, state: int, action: int) -> float:
         pass
