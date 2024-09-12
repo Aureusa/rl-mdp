@@ -39,7 +39,7 @@ class Policy(AbstractPolicy):
         """
         :param state:
         :param action:
-        :return: Gets the probability of an action `a` given the state `s` pi(a|s)
+        :return: Gets the probability of an action `a` given the state `s` pi(a|s).
         """
         return self._action_probabilities(state)[action]
 
