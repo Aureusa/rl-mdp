@@ -20,7 +20,7 @@ class Policy(AbstractPolicy):
 
         if policy_mapping is not None:
             if num_actions is None:
-                raise ValueError("You need to pass a num_actions argument when passing a policy_mapping")
+                raise ValueError("You need to pass a num_actions argument when passing a policy_mapping.")
             for state, action in enumerate(policy_mapping):
                 self.set_action_probabilities(state, [1.0 if a == action else 0.0 for a in range(num_actions)])
 
