@@ -1,4 +1,6 @@
+import numpy as np
 from rl_mdp.mdp.abstract_mdp import AbstractMDP
+from rl_mdp.policy.abstract_policy import AbstractPolicy
 from rl_mdp.policy.policy import Policy
 
 
@@ -30,5 +32,14 @@ class DynamicProgrammingSolver:
         Performs policy iteration to find the optimal policy.
 
         :return: An optimal policy.
+        """
+        pass
+
+    def iterative_policy_evaluation(self, policy: AbstractPolicy) -> np.ndarray:
+        """
+        Evaluates iteratively the value function for a given policy.
+
+        :param policy: An instance of the Policy class, which provides the action probabilities for each state.
+        :return: A NumPy array representing the value function for the given policy.
         """
         pass
