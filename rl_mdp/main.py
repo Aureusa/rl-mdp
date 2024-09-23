@@ -4,6 +4,7 @@ from mdp.transition_function import TransitionFunction
 from policy.policy import Policy
 from mdp.mdp import MDP
 from bellman.bellmanequationsolver import BellmanEquationSolver
+from dynamic_programming.dynamicprogrammingsolver import DynamicProgrammingSolver
 
 def Create_mdp_and_policy():
     # S0 = 0; S1 = 1; S2 = 2
@@ -54,8 +55,19 @@ def main() -> None:
     Solver = BellmanEquationSolver(mdp)
     Policy_evaluation = Solver.policy_evaluation(policy)
 
-    print(Policy_evaluation)
+    print(f"Policy Evaluation: {Policy_evaluation}")
 
+    DPSolver = DynamicProgrammingSolver(mdp)
+
+    Optimal_Policy_PI = DPSolver.policy_iteration()
+
+    print("Optimal Policy arrived at by Policy iteration:")
+    print(Optimal_Policy_PI.action_dist)
+
+    Optimal_Policy_VI = DPSolver.value_iteration()
+
+    print("Optimal Policy arrived at by Policy iteration:")
+    print(Optimal_Policy_VI.action_dist)
 
 if __name__ == "__main__":
     main()
