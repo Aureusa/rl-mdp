@@ -1,6 +1,6 @@
 from typing import List, Optional
 import numpy as np
-from rl_mdp.policy.abstract_policy import AbstractPolicy
+from policy.abstract_policy import AbstractPolicy
 
 
 class Policy(AbstractPolicy):

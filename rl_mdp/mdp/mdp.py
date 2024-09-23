@@ -1,8 +1,8 @@
 from typing import List
 import numpy as np
-from rl_mdp.mdp.abstract_mdp import AbstractMDP
-from rl_mdp.mdp.reward_function import RewardFunction
-from rl_mdp.mdp.transition_function import TransitionFunction
+from mdp.abstract_mdp import AbstractMDP
+from mdp.reward_function import RewardFunction
+from mdp.transition_function import TransitionFunction
 
 
 class MDP(AbstractMDP):
