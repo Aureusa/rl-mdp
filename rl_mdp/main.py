@@ -66,7 +66,7 @@ def main() -> None:
 
     Optimal_Policy_VI = DPSolver.value_iteration()
 
-    print("Optimal Policy arrived at by Policy iteration:")
+    print("Optimal Policy arrived at by Value iteration:")
     print(Optimal_Policy_VI.action_dist)
 
 if __name__ == "__main__":
